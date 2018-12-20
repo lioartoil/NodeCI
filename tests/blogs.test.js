@@ -69,7 +69,7 @@ describe('User is not logged in', async () => {
 		{ method: 'post', path: 'api/blogs', data: { title: 'T', content: 'C' } }
 	];
 
-	test.only('Blog related actions are prohibited', async () => {
+	test('Blog related actions are prohibited', async () => {
 		const results = await page.execRequests(actions);
 
 		for (let result of results) {
